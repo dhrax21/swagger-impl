@@ -1,8 +1,6 @@
 package com.dhrax.springbootswaggerimpl.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,6 +8,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Getter
+@Setter
 @Table(name="PRODUCT_TABLE")
 public class Product {
 
@@ -19,4 +19,7 @@ public class Product {
     private String name;
     private int quantity;
     private double price;
+
+    @OneToOne
+    private Customer customer;
 }
