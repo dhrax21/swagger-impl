@@ -8,8 +8,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Getter
-@Setter
 @Table(name="PRODUCT_TABLE")
 public class Product {
 

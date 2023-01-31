@@ -14,10 +14,13 @@ import java.util.List;
 @Entity
 @Table(name = "customer")
 public class Customer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private String mobile;
 
-    @OneToOne
+    @OneToOne(mappedBy ="customer",cascade = CascadeType.ALL)
     private Product product;
 }
